@@ -1,6 +1,6 @@
 # from email.mime import text
 # from frequent_words import FrequentWords as inclass_frequent_words
-from pattern_count import patternCount
+from pset2.pattern_count import patternCount
 
 def frequentWords(text: str, k: int) -> set[str]:
     """consider adding docstring"""
