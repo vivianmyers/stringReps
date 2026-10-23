@@ -7,5 +7,18 @@ def reverseComplement(text: str) -> str:
     A pairs with T, and C pairs with G. Return the complementary
     nucleotides in reverse order.
     """
-    # TODO: Implement the reverse complement.
-    raise NotImplementedError("Implement reverseComplement for Rosalind BA1C.")
+    ret = ""
+    
+    for char in text:
+        if char == "A":
+            ret += "T"
+        elif char =="T":
+            ret += "A"
+        elif char == "C":
+            ret += "G"
+        elif char == "G":
+            ret += "C"
+    
+    return ret[::-1]
+
+print(reverseComplement("ATG"))
