@@ -1,9 +1,3 @@
-"""Rosalind RNA: Transcribing DNA into RNA."""
-
-
-from email.mime import text
-
-
 def transcribeRNA(text: str) -> str:
     """Return the RNA string corresponding to an uppercase DNA coding strand.
 
