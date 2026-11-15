@@ -4,5 +4,14 @@ def overlapGraph(patterns: list[str]) -> list[list[str]]:
     Each row contains one directed edge, with the source first.
     Row order does not matter.
     """
-    # TODO: Write your code here.
-    raise NotImplementedError("Implement overlapGraph")
+    
+    result = []
+
+    for pattern1 in patterns:
+        suffix = pattern1[1:]
+        for pattern2 in patterns:
+            prefix = pattern2[:-1]
+            if pattern1 != pattern2 and suffix == prefix:
+                result.append([pattern1, pattern2])
+
+    return result

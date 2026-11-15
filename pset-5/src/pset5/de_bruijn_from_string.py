@@ -4,5 +4,10 @@ def deBruijnFromString(k: int, text: str) -> list[list[str]]:
     Each row contains one directed edge, with the source first.
     Row order does not matter. Preserve duplicate rows for parallel edges.
     """
-    # TODO: Write your code here.
-    raise NotImplementedError("Implement deBruijnFromString")
+    
+    result = []
+    for i in range(len(text) - k + 1):
+        start = text[i : (i + k - 1)]
+        end = text[(i + 1) : (i + k)]
+        result.append([start, end])
+    return result
