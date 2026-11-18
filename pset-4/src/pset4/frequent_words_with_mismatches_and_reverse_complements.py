@@ -9,7 +9,7 @@ def frequentWordsWithMismatchesAndReverseComplements(text: str, k: int, d: int) 
     possible k-mers."""
     
     def makePatterns(n: int) -> list[str]:
-        patterns = []
+        patterns = [""]
         
         alphabet = "ACGT"
         for i in range(n):
@@ -80,7 +80,5 @@ def frequentWordsWithMismatchesAndReverseComplements(text: str, k: int, d: int) 
     for pattern in patterns:
         if counts[pattern] == max:
             ret.add(pattern)
-
     return ret
         
-    
