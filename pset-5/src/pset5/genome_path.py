@@ -12,3 +12,4 @@ def stringSpelledByGenomePath(patterns: list[str]) -> str:
 # Example usage:
 sample_path = ["ACCGA", "CCGAA", "CGAAG", "GAAGC", "AAGCT"]
 print(stringSpelledByGenomePath(sample_path))  # Output: ACCGAAGCT
+

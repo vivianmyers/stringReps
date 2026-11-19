@@ -18,3 +18,4 @@ def deBruijnFromKmers(patterns: list[str]) -> list[list[str]]:
 # Example:
 sample_patterns = ["GAGG", "CAGG", "GGGG", "GGGA", "CAGG", "AGGG", "GGAG"]
 print(deBruijnFromKmers(sample_patterns))
+
