@@ -1,4 +1,14 @@
 def stringSpelledByGenomePath(patterns: list[str]) -> str:
     """Return the string spelled by the ordered genome path (BA3B)."""
-    # TODO: Write your code here.
-    raise NotImplementedError("Implement stringSpelledByGenomePath")
+    if not patterns:
+        return ""
+
+    genome = patterns[0]
+    for kmer in patterns[1:]:
+        genome += kmer[-1]
+
+    return genome
+
+# Example usage:
+sample_path = ["ACCGA", "CCGAA", "CGAAG", "GAAGC", "AAGCT"]
+print(stringSpelledByGenomePath(sample_path))  # Output: ACCGAAGCT
